@@ -4,10 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import Layout from './layouts/Layout';
+import About from './routes/About';
+import Contact from './routes/Contact';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+const AppComponent = Layout(App);
+
+const AboutComponent = Layout(About);
+
+const ContactComponent = Layout(Contact);
+
+
+const router = createBrowserRouter([
+  { path: '/', element: <AppComponent /> },
+  { path: '/about', element: <AboutComponent /> },
+  { path: '/contact', element: <ContactComponent /> },
+]);
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
