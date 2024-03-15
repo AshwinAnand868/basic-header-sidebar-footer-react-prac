@@ -1,3 +1,7 @@
+# UI Screenshot
+
+![Current UI Screenshot](https://github.com/AshwinAnand868/basic-header-sidebar-footer-react-prac/blob/main/public/app-ui.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
